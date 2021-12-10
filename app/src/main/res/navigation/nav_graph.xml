@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="dev.bahodir.uploadgalleryeasy.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondOneFragment"
+            app:destination="@id/secondOneFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_firstFragment_to_secondTwoFragment"
+            app:destination="@id/secondTwoFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondOneFragment"
+        android:name="dev.bahodir.uploadgalleryeasy.SecondOneFragment"
+        android:label="fragment_second_one"
+        tools:layout="@layout/fragment_second_one" />
+    <fragment
+        android:id="@+id/secondTwoFragment"
+        android:name="dev.bahodir.uploadgalleryeasy.SecondTwoFragment"
+        android:label="fragment_second_two"
+        tools:layout="@layout/fragment_second_two" >
+        <action
+            android:id="@+id/action_secondTwoFragment_to_secondTwoActionFragment"
+            app:destination="@id/secondTwoActionFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondTwoActionFragment"
+        android:name="dev.bahodir.uploadgalleryeasy.SecondTwoActionFragment"
+        android:label="fragment_second_two_action"
+        tools:layout="@layout/fragment_second_two_action" />
+</navigation>
